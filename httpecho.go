@@ -24,7 +24,7 @@ func main() {
 		Usage:       "httpecho [flags]",
 		Description: "Echo server accepting malformed HTTP request",
 		Flags: quicli.Flags{
-			{Name: "serve", Description: "Serve continuously. If not only wait for 1 request"},
+			{Name: "serve", Default: true, Description: "Serve continuously. If not only wait for 1 request"},
 			{Name: "timeout", Default: 200, Description: "Timeout to close connection. Needed for closing http request."},
 			{Name: "dump", Default: "", Description: "Dump incoming request to a file. If not used then print to stdout"},
 			{Name: "port", Default: "8888", Description: "Listening on specific port"},
